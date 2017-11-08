@@ -1,0 +1,242 @@
+﻿@charset "utf-8";
+.mall-banner-box {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+
+/* .mall-banner-box .toleft{display:block;height:46px;width:18px;background:url("../images/mall-left.png") no-repeat;position:absolute;z-index:9;top:177px;left:50px;}
+.mall-banner-box .toright{display:block;height:46px;width:18px;background:url("../images/mall-right.png") no-repeat;position:absolute;z-index:9;top:177px;right:50px;} */
+
+.mall-banner-box .mall-banner-frame {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 6;
+}
+
+.mall-banner-box .mall-banner-frame a {
+    display: block;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    z-index: 7;
+    top: 0px;
+    overflow: hidden;
+}
+
+.mall-banner-box .mall-banner-frame a .out {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.mall-banner-box .mall-banner-frame a .in {
+    display: block;
+    position: absolute;
+    left: 50%;
+}
+
+.mall-banner-box .mall-banner-frame a img {
+    display: block;
+    position: relative;
+    left: -50%;
+}
+
+.main-box .main .left-box {
+    width: 735px;
+}
+
+.main-box .main .whole-box {
+    width: 100%;
+}
+
+.branch-box {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.branch-box .branch-menu {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: #e0e0e0 solid 2px;
+}
+
+.branch-box .branch-menu .branch-title {
+    font-size: 23px;
+    font-weight: normal;
+}
+
+.branch-box .branch-menu .branch-item {
+    margin-left: 20px;
+}
+
+.branch-box .branch-menu .branch-item a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #666;
+    *float: left;
+}
+
+
+/* .branch-box .branch-menu li.cur{border-bottom:#e47911 solid 2px;margin-bottom:-2px;_margin-bottom:0px;background:url("../images/orange-bottom-ecke.png") no-repeat center bottom;} */
+
+.branch-box .more-box {
+    height: 14px;
+    text-align: right;
+    visibility: visible;
+    width: 100%;
+}
+
+.branch-box .more-box a {
+    line-height: 14px;
+    font-size: 12px;
+    color: #16AFE5;
+}
+
+.product-item {
+    width: 222px;
+    padding: 20px 11px;
+    height: 270px;
+    overflow: hidden;
+}
+
+.product-item a.pic-box {
+    display: block;
+    width: 222px;
+    height: 222px;
+}
+
+.product-item .img-box {
+    height: 220px;
+    width: 220px;
+    border: #f1f1f1 solid 1px;
+    position: relative;
+    z-index: 3;
+}
+
+
+/* .product-item .new{width:52px;height:54px;position:absolute;z-index:5;top:0;right:0;background:url("../images/mall-new.png") no-repeat;} */
+
+.product-item a div {
+    line-height: 24px;
+    height: 24px;
+    color: #666;
+    /**height:44px;*/
+    overflow: hidden;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.product-item a p.premotion {
+    line-height: 20px;
+    height: 20px;
+    color: red;
+    font-weight: bold;
+    /**height:44px;*/
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.product-item .rmb {
+    color: #888;
+    line-height: 24px;
+}
+
+.product-item .price {
+    color: #e47911;
+    font-weight: bold;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.product-item .mark {
+    color: #888;
+    line-height: 22px;
+}
+
+.right-box {
+    width: 227px;
+}
+
+.right-box .product-sugesst-frame {
+    width: 225px;
+    border: #ededed solid 1px;
+    margin-top: 20px;
+    line-height: 0px;
+    font-size: 0px;
+}
+
+.right-box .product-sugesst-frame .menu {
+    width: 225px;
+    height: 38px;
+    background-color: #ededed;
+}
+
+.right-box .product-sugesst-frame .menu li {
+    width: 112px;
+    height: 38px;
+}
+
+.right-box .product-sugesst-frame .menu li a {
+    display: block;
+    width: 112px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+    background-color: #f5f5f5;
+    border-bottom: #ededed solid 1px;
+}
+
+.right-box .product-sugesst-frame .menu li.cur a {
+    background-color: #fff;
+    border-bottom: none;
+    color: #16AFE5;
+    font-weight: bold;
+}
+
+.right-box .product-sugesst-frame .product-list li {
+    width: 184px;
+    margin: 0 auto;
+    padding: 15px 0;
+    border-bottom: #ededed dotted 1px;
+}
+
+.right-box .product-sugesst-frame .product-list li .pic-box {
+    display: block;
+    height: 80px;
+    width: 80px;
+}
+
+.right-box .product-sugesst-frame .product-list li .inf-box {
+    width: 93px;
+    font-size: 14px;
+}
+
+.right-box .product-sugesst-frame .product-list li .inf-box .name a {
+    line-height: 20px;
+    color: #666;
+    font-size: 12px;
+}
+
+.right-box .product-sugesst-frame .product-list li .inf-box .discribt {
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.right-box .product-sugesst-frame .product-list li .inf-box .price {
+    line-height: 24px;
+    color: #16AFE5;
+    font-size: 12px;
+}

@@ -99,8 +99,8 @@ var store = new vuex.Store({
 //引入axios
 import axios from 'axios';
 
-// axios.defaults.baseURL = 'http://157.122.54.189:9095';
-axios.defaults.baseURL = 'http://127.0.0.1:8899';
+axios.defaults.baseURL = 'http://157.122.54.189:9095';
+// axios.defaults.baseURL = 'http://111.230.21.151:8899';
 
 Vue.prototype.$http = axios;
 
@@ -115,19 +115,19 @@ import '../statics/site/css/style.css';
 Vue.use(elementUI);
 
 // //引用移动端UI的样式
-// import mintui from 'mint-ui';
+import mintui from 'mint-ui';
 // //将mintui样式导入
-// import 'mint-ui/lib/style.css';
-// Vue.use(mintui);
+import 'mint-ui/lib/style.css';
+Vue.use(mintui);
 
 // //全局导入Mui的样式
-// import '../statics/mui/css/mui.css';
+import '../statics/mui/css/mui.css';
 
 
 //创建路由
 var router = new vueRouter({
     //routes构建路由
-    routes: [{ name: 'default', path: '/', redirect: '/admin' },
+    routes: [{ name: 'default', path: '/', redirect: '/admin/goodslist' },
         {
             name: 'layout',
             path: '/admin',

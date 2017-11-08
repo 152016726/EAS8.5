@@ -12,7 +12,7 @@
             <el-input type="password" v-model="form.password" :width="100"></el-input>
           </el-form-item>
         </el-col>
-        <el-col>
+        <el-col :offset="10">
           <el-form-item>
             <el-button type="primary" @click="submitForm()">提交</el-button>
           </el-form-item>

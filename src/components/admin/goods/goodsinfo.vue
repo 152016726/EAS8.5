@@ -15,7 +15,7 @@
         <div class="wrapper clearfix">
             <div class="wrap-box">
         <!--页面左边-->
-                <div class="left-925">
+                <div class="left-743">
                     <div class="goods-box clearfix" >
         <!--商品图片-->
                         <div class="pic-box">

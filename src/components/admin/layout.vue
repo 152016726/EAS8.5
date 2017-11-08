@@ -1,6 +1,183 @@
 <template>
-  <div class="temp">
-      <div id="header" class="header">
+  <!-- <div class="temp"> -->
+<div class="mall">
+    <div class="wrapper">
+        <div class="container">
+
+            <div id="to-top">
+                <a class="pngfix" href="#"></a>
+            </div>
+
+            <div class="mall-head-box">
+                <div class="mall-head clear2">
+                    <h1 class="KD-LOGO-box f-l"><span><a class="KD-LOGO f-l" href="http://www.kingdee.com" target="_blank">金蝶官网</a><a class="KD-TXT f-l" href="/">商城</a></span></h1>
+                    <div class="head-right f-r">
+                        <div class="head-search-box clear2">
+                            <form id="prdct-search" name="prdct-search" action="/search.action">
+                                <input id="gsk" type="text" name="k" class="prdct-search-input f-l" value="输入关键词" onfocus="if (value =='输入关键词'){value =''}" maxlength="50" onblur="if (value ==''){value='输入关键词'}" />
+                                <input id="gsBtn" type="button" class="prdct-search-submit f-l" value="搜 索" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--content-->
+            <div class="main-content">
+                <div class="mall-main-menu-box">
+                    <div class="mall-main-menu">
+                        <div class="menu-box f-l">
+                            <div class="all-menu-box f-l">
+                                <a class="all-menu-btn pngfix" href="javascript:void(0);">所有商品分类</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="/search.action">所有商品</a>
+                                        <ul class="sub-2-menu">
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/search.action?c=263010">财务软件</a>
+                                        <ul class="sub-2-menu">
+                                            <li><a href="/search.action?c=265203">KIS系列</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/search.action?c=263011">进销存软件</a>
+                                        <ul class="sub-2-menu">
+                                            <li><a href="/search.action?c=265175">KIS系列</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/search.action?c=263012">管理软件</a>
+                                        <ul class="sub-2-menu">
+                                            <li><a href="/search.action?c=265204">KIS系列</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/search.action?c=263033">软件服务</a>
+                                        <ul class="sub-2-menu">
+                                            <li><a href="/search.action?c=265176">KIS系列适用</a></li>
+                                            <li><a href="/search.action?c=266318">K/3系列适用</a></li>
+                                            <li><a href="/search.action?c=303737">EAS系列适用</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/search.action?c=265174">配套用品</a>
+                                        <ul class="sub-2-menu">
+                                            <li><a href="/search.action?c=265205">套打凭证</a></li>
+                                            <li><a href="/search.action?c=265206">套打账簿</a></li>
+                                            <li><a href="/search.action?c=265207">装订产品</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/search.action?c=453360">其他</a>
+                                        <ul class="sub-2-menu">
+                                            <li><a href="/search.action?c=453362">其他</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="menu-item f-l"> 
+                                <li class="f-l cur">
+                                    <router-link to="/admin/goodslist">
+                                        <a href="javascript:;">首页</a>
+                                    </router-link>
+                                </li>
+                                <li class="f-l "><a href="javascript:;">财务软件</a></li>
+                                <li class="f-l "><a href="javascript:;">进销存软件</a></li>
+                                <li class="f-l "><a href="javascript:;">管理软件</a></li>
+                                <li class="f-l "><a href="javascript:;">配套用品</a></li>
+                                <li class="f-l "><a href="javascript:;">原厂服务</a></li>
+                                <li class="f-l "><a href="javascript:;">热销商品</a></li>
+                                <li class="f-l "><a href="javascript:;">客户须知</a></li>
+                            </ul>
+                        </div>
+                        <div class="acount-box f-r">
+                            <ul>
+
+                                <router-link v-if="statu" to="/admin/login">
+                                    <li class="blue-menu-item f-l">
+                                        <a class="logo-out f-l" href="javascript:;">登录</a>
+                                    </li>
+                                </router-link>
+                                <router-link v-if="statu" to="/admin/logister">
+                                     <li class="blue-menu-item f-l">
+                                        <a class="logo-out f-l" href="javascript:;">注册</a>
+                                     </li>
+                                </router-link>
+                                <router-link v-if="!statu" to="/admin/vipcenter">
+                                    <li class="blue-menu-item f-l">
+                                        <a class="logo-out f-l" href="javascript:;">会员中心</a>
+                                    </li>
+                                </router-link>
+                                <li v-if="!statu" class="blue-menu-item f-l">
+                                    <a href="javascript:;" @click="logout">退出</a>
+                                </li>
+                                <router-link to="/admin/carinfo">
+                                    <li class="my-carray f-l">
+                                        <a href="javascript:;"><span class="txt">购物车</span><span class="buy-num" id="shoppingCartCount">{{this.$store.getters.getcount}}</span></a>
+                                    </li>
+                                </router-link>        
+                            </ul>
+                        </div>
+                        <div class="clear hide"></div>
+                    </div>
+                </div>
+            </div>
+            <router-view></router-view>
+            <!-- 底部foot -->
+            <div class="mall-foot-box">
+                <div class="mall-foot-out">
+                    <div class="mall-foot clear2">
+                        <div class="contact-service f-l">
+                            <dl>
+                                <dt>联系客服</dt>
+                                <dd>4008-830-830</dd>
+                            </dl>
+                        </div>
+                        <div class="rule new f-l">
+                            <dl>
+                                <dt>新手上路</dt>
+                                <dd><span>&middot;</span><a href="/how.action#how1">注册新用户</a></dd>
+                                <dd><span>&middot;</span><a href="/how.action#how2">网站订购流程</a></dd>
+                            </dl>
+                        </div>
+                        <div class="rule pay f-l">
+                            <dl>
+                                <dt>付款</dt>
+                                <dd><span>&middot;</span><a href="/how.action#how3">支付方式</a></dd>
+                                <dd><span>&middot;</span><a href="/how.action#how5">发票服务</a></dd>
+                            </dl>
+                        </div>
+                        <div class="rule send f-l">
+                            <dl>
+                                <dt>配送/查询</dt>
+                                <dd><span>&middot;</span><a href="/how.action#how6">配送方式</a></dd>
+                                <dd><span>&middot;</span><a href="/how.action#how7">签收注意事项</a></dd>
+                                <dd><span>&middot;</span><a href="/how.action#how8">快递查询</a></dd>
+                            </dl>
+                        </div>
+                        <div class="rule garantee f-l">
+                            <dl>
+                                <dt>售后服务</dt>
+                                <dd><span>&middot;</span><a href="/how.action#how9">退换货事项</a></dd>
+                                <dd><span>&middot;</span><a href="/how.action#how10">退换货流程</a></dd>
+                            </dl>
+                        </div>
+                        <div class="rule help f-l">
+                            <dl>
+                                <dt>帮助中心</dt>
+                                <dd><span>&middot;</span><a href="/how.action#how11">联系我们</a></dd>
+                                <dd><span>&middot;</span><a href="/how.action#how12">投诉与建议</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="mall-foot-bottom">版权所有 ©1993-2017&nbsp;&nbsp;&nbsp;&nbsp;金蝶软件（中国）有限公司&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备05041751号-21</div>
+            </div>
+        </div>
+    </div>
+</div>
+      <!-- <div id="header" class="header">
             <div class="head-top">
                 <div class="section">
                     <div class="left-box">
@@ -19,7 +196,6 @@
                             <a href="javascript:;">会员中心</a>
                         </router-link>
                         <a v-if="!statu" href="javascript:;" @click="logout">退出</a><strong>|</strong>
-                        <!-- <a href="/content/contact.html"><i class="iconfont icon-phone"></i>联系我们</a> -->
                         <router-link to="/admin/carinfo">
                         <a href="javascript:;"><i class="iconfont icon-cart"></i>购物车(<span id="shoppingCartCount">{{this.$store.getters.getcount}}</span>)</a>
                         </router-link>    
@@ -28,9 +204,6 @@
             </div>
       <div class="head-nav">
             <div class="section">
-                        <!-- <div class="logo">
-                                            <a href="/index.html"><img width="230px" height="70px" src="/templates/main/images/logo.png" /></a>
-                                        </div>-->
                     <div id="menu2" class="nav-box menuhd">
                         <ul>
                             
@@ -49,7 +222,6 @@
                                     重难点专区
                                 </a>
                             </li>
-                        <!--<li class="goods"><a href="">就业阶段</a></li>-->
                             <li class="video">
                                 <a href="/video.html">
                                     前端常用功能
@@ -81,8 +253,8 @@
                 </div>
             </div>
     </div>
-    <router-view></router-view>
-</div>
+    <router-view></router-view> -->
+<!-- </div> -->
 </template>
 <script>
     import {
@@ -152,6 +324,11 @@
 <!-- scoped表明style样式只作用于当前页面 -->
 <style>
     @import url('../../../statics/elementuiCss/index.css');
+    @import url('../../../statics/site/css/mall-base.css');
+    @import url('../../../statics/site/css/mall-index.css');
+    @import url('../../../statics/site/css/base.css');
+    @import url('../../../statics/site/css/mykdbase.css');
+    @import url('../../../statics/site/css/reset.css');
     .header .head-nav .search-box {
         right: 215px;
     }

@@ -190,7 +190,7 @@ table {
 .section {
     position: relative;
     margin: 0 auto;
-    width: 1160px;
+    width: 980px;
     min-width: 925px;
     max-width: 1160px;
     text-align: left;
@@ -215,7 +215,7 @@ table {
 }
 
 .wrap-box {
-    width: 1160px;
+    width: 100%;
 }
 
 .left-925 {
@@ -226,12 +226,12 @@ table {
     width: 925px;
 }
 
-.left-705 {
+.left-743 {
     position: relative;
     float: left;
     margin: 0;
     padding: 0;
-    width: 705px;
+    width: 743px;
 }
 
 .left-690 {
@@ -242,12 +242,12 @@ table {
     width: 690px;
 }
 
-.left-455 {
+.left-510 {
     position: relative;
     float: left;
     margin: 0 0 0 15px;
     padding: 0;
-    width: 455px;
+    width: 510px;
 }
 
 .left-260 {
@@ -425,7 +425,7 @@ table {
 
 .sub-tit {
     margin: 0 50px 10px;
-    padding-top: 35px;
+    /* padding-top: 35px; */
     height: 42px;
     border-bottom: 1px solid #e0e0e0;
     font-size: 16px;
@@ -2739,9 +2739,9 @@ table {
     display: block;
     float: left;
     margin-right: 10px;
-    width: 60px;
-    height: 60px;
-    border-radius: 60px;
+    width: 42px;
+    height: 42px;
+    border-radius: 42px;
     background: #fff;
     text-align: center;
     overflow: hidden;
@@ -2749,8 +2749,8 @@ table {
 
 .avatar-box .img-box img {
     padding: 2px;
-    width: 54px;
-    height: 54px;
+    width: 42px;
+    height: 42px;
     border: 1px solid #f5f5f5;
     border-radius: 60px;
     background: #fff;
@@ -2758,8 +2758,8 @@ table {
 
 .avatar-box .img-box i {
     color: #ccc;
-    font-size: 54px;
-    line-height: 78px;
+    font-size: 42px;
+    line-height: 42px;
     background: #fff;
 }
 
@@ -2768,7 +2768,7 @@ table {
     color: #333;
     font-size: 14px;
     font-weight: normal;
-    line-height: 32px;
+    line-height: 23px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -3164,6 +3164,14 @@ table {
 .goods-tab .tab-head ul li a.selected {
     color: #fff;
     background: #34ad2a;
+}
+
+
+/* 通用模板 */
+
+.tmpl {
+    width: 980px;
+    margin: 0 auto;
 }
 
 

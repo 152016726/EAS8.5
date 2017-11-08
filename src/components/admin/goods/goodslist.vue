@@ -54,7 +54,7 @@
                     <!--/类别菜单-->
                     
                     <!--幻灯片-->
-                    <div class="left-705">
+                    <div class="left-510">
                         <div class="banner-img">
                             <div id="focus-box" class="focus-box">
                                <el-carousel :interval="5000" arrow="always">
@@ -117,22 +117,24 @@
                     <ul class="img-list">
                 
                         <li v-for="(dataitem,index) in item.datas" :key="index">
-                            <a href="/goods/show-91.html">
-                                <div class="img-box">
-                                    <img :src="dataitem.img_url">
-                                </div>
-                                <div class="info">
-                                    <h3>{{dataitem.artTitle}}</h3>
-                                    <p class="price">
-                                        <b>¥{{dataitem.sell_price}}</b>元</p>
-                                    <p>
-                                        <strong>库存 {{dataitem.stock_quantity}}}</strong>
-                                        <span>市场价：
-                                            <s>{{dataitem.market_price}}</s>
-                                        </span>
-                                    </p>
-                                </div>
-                            </a>
+                            <router-link v-bind="{to:'/admin/goodsinfo/'+dataitem.artID}">
+                                <a href="javascript:;">
+                                    <div class="img-box">
+                                        <img :src="dataitem.img_url">
+                                    </div>
+                                    <div class="info">
+                                        <h3>{{dataitem.artTitle}}</h3>
+                                        <p class="price">
+                                            <b>¥{{dataitem.sell_price}}</b>元</p>
+                                        <p>
+                                            <strong>库存 {{dataitem.stock_quantity}}}</strong>
+                                            <span>市场价：
+                                                <s>{{dataitem.market_price}}</s>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </router-link>
                         </li>
                 
                 </ul>

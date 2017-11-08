@@ -72,11 +72,11 @@
                         <div class="right-auto">
                             <div class="bg-wrap" style="min-height: 765px;">
                                 <div class="sub-tit">
-                                    <ul>
+                                     <ul>
                                         <li class="selected">
                                             <a href="/user/order-list.html">交易订单</a>
                                         </li>
-                                    </ul>
+                                    </ul> 
                                 </div>
                                 <div class="table-wrap">
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ftable">
@@ -190,5 +190,17 @@
     }
 </script>
 <style scoped>
-
+    div.el-input.el-pagination__editor.is-in-pagination {
+        width: 50px;
+        height: 22px;
+        line-height: 22px;
+    }
+    
+    .el-pagination__editor {
+        padding: 0;
+    }
+    
+    .el-pagination__jump div input {
+        height: 100%;
+    }
 </style>

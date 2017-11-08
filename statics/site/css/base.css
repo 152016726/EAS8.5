@@ -1,0 +1,147 @@
+﻿@charset "utf-8";
+
+/*
+	Document   : Cloud
+    Created on : 2012-06-15
+    Author     : XiongJie
+*/
+
+body {
+    font-family: 微软雅黑;
+    overflow-y: auto;
+}
+
+.f-l {
+    float: left;
+}
+
+.f-r {
+    float: right;
+}
+
+.m-r {
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+}
+
+.clear2 {
+    overflow: hidden;
+    *zoom: 1;
+}
+
+.logo,
+.home-ico,
+.content .login .login-bt,
+.help-ico,
+.pic-ico1,
+.pic-ico2,
+.pic-ico3,
+.login-go,
+.un-login {
+    background: url("../images/body-bg.gif") no-repeat scroll 0 0 transparent;
+}
+
+
+/*header*/
+
+.header {
+    width: 100%;
+    height: 110px;
+}
+
+.header .top {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header .top .logo {
+    display: block;
+    width: 340px;
+    height: 60px;
+    margin-top: 20px;
+    float: left;
+}
+
+.header .top .link {
+    font-size: 12px;
+    float: right;
+    margin-top: 50px;
+    width: 240px;
+}
+
+.header .top .link .home-ico {
+    background-position: -360px 0;
+    display: block;
+    width: 18px;
+    height: 18px;
+    float: left;
+}
+
+.header .top .link .help-ico {
+    background-position: -390px 0;
+    display: block;
+    width: 18px;
+    height: 18px;
+    float: left;
+}
+
+.header .top .link .user-home-ico {
+    background: url(../images/picon.png) no-repeat;
+    display: block;
+    width: 18px;
+    height: 18px;
+    float: left;
+}
+
+.header .top .link a {
+    color: #333;
+}
+
+.header .top .link div {
+    margin-right: 5px;
+}
+
+.account-tips {
+    font-size: 12px;
+    color: #8c8c8c;
+    margin-top: 5px;
+}
+
+.border-right {
+    border-right: 1px solid #D7ECFD;
+}
+
+
+/*footer*/
+
+.footer {
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    clear: both;
+    font-size: 12px;
+    color: #999;
+}
+
+.footer a {
+    color: #999;
+}
+
+.hide {
+    display: none;
+}
+
+#BDBridgeLS {
+    display: none;
+}

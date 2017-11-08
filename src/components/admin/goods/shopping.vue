@@ -42,7 +42,7 @@
                 <el-form :model="form" :rules="rules" ref="ruleForm" class="demo-ruleForm">
                     <div class="form-box address-info">
                         <el-form-item class="form-group" label="收货人姓名：" prop="accept_name">
-                                <el-input :span="2" v-model="form.accept_name"></el-input>
+                                <mt-input :span="2" v-model="form.accept_name"></mt-input>
                                 <span class="Validform_checktip">*收货人姓名</span>
                         </el-form-item>
                         
@@ -83,7 +83,7 @@
                         <!--取得一个DataTable-->
                         <el-form-item class="form-group" label="快递方式：" prop="mobile">
                         <el-radio-group v-for="item in expresslist" :key="item.id" v-model="form.express_id" @change="getexpressid">
-                            <el-radio :label="item.id">{{item.title}}(运费：￥{{item.express_fee}})</el-radio>
+                            <mt-radio :label="item.id">{{item.title}}(运费：￥{{item.express_fee}})</mt-radio>
                         </el-radio-group>
                     </el-form-item>
                     </ul>
